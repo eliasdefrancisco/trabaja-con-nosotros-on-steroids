@@ -1,34 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PROYECTO PARA LA HACKATON DE INFOJOBS TRAIDA POR MIDUDEV
 
-## Getting Started
+## Nombre del proyecto
 
-First, run the development server:
+Trabaja con nosotros On Steroids
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Título
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Enlace 'Trabaja con nosotros' asistido por IA
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Descripción
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Permite a las empresas que buscan trabajadores en Infojobs, generar el código HTML necesario para incrustar un enlace en sus webs corporativas, el cual llevará a los usuarios a un formulario con preguntas autogeneradas con una IA tipo ChatGPT
 
-## Learn More
+Dichas preguntas estarán basadas en la descripción del perfil de la empresa en Infojobs y servirán para que la empresa tenga una primera aproximación del perfil del candidato con un esfuerzo prácticamente nulo, sin necesidad de redactar algo mas especifico como prodría ser una oferta de trabajo
 
-To learn more about Next.js, take a look at the following resources:
+Ademas de las ventajas al usuario, la web de Infojobs quedaría beneficiada de publicidad orgánica gratuita de la mas alta calidad SEO, ya que conseguiría que webs corporativas hiciesen una referencia directa a su dominio infojobs.com
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Decisiones técnicas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- No hará falta conectarse a su api de empresas, ya que no se proporciona acceso a la misma. En su lugar se usara un json mock con informacion de varias empresas (Incluir atSistemas)
+- No hará falta conectarse con su api de clientes, ya que el usuario al inscribirse en la oferta, solamente tendra de dejar su nombre de usuario en la incripción para que la empresa lo contacte
+- No se hara CSS en darkmode, ya que InfoJobs no la ofrece en su web
