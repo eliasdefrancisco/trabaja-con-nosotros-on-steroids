@@ -1,11 +1,12 @@
 import { Montserrat } from 'next/font/google'
 import './globals.css'
 import Header from './header/page'
+import Footer from './footer/page'
 
 const montserratFont = Montserrat({
   weight: ['100', '300', '500'],
   subsets: ['latin'],
-  style: ['italic', 'normal'],
+  style: ['normal'],
   variable: '--font-monsterrat',
   display: 'swap'
 })
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       <body className={montserratFont.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

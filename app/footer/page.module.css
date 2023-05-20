@@ -1,0 +1,23 @@
+.footer {
+  width: 100%;
+  background-color: var(--background-color-0);
+  filter: drop-shadow(0px -1px 1px var(--foreground-color-0-alpha-0));
+  padding: 1rem;
+  text-align: center;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.spider {
+  font-size: 2rem;
+}
