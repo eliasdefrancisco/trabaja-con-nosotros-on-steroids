@@ -1,5 +1,6 @@
 import { Montserrat } from 'next/font/google'
 import './globals.css'
+import Header from './header/page'
 
 const montserratFont = Montserrat({
   weight: ['100', '300', '500'],
@@ -17,7 +18,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={montserratFont.className}>{children}</body>
+      <body className={montserratFont.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
