@@ -1,5 +1,6 @@
 export const companiesMock = [
   {
+    companyId: '1',
     companyName: 'atSistemas',
     imageName: 'atsistemas.png',
     description: `
@@ -21,6 +22,7 @@ Si pudieras diseñar la tecnología del futuro, ¿cómo sería? Tenemos una visi
     `
   },
   {
+    companyId: '2',
     companyName: 'Unilever',
     imageName: 'unilever.gif',
     description: `
@@ -35,6 +37,7 @@ Para conseguirlo, buscamos a los mejores talentos con ganas de cambiar el mundo 
     `
   },
   {
+    companyId: '3',
     companyName: 'PepsiCo',
     imageName: 'pepsico.png',
     description: `

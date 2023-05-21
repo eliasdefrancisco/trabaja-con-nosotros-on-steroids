@@ -1,0 +1,29 @@
+.gptQuery {
+    margin-top: 1rem;
+}
+
+.gptData {
+    margin-top: 1rem;
+}
+
+.button {
+    background-color: var(--background-color-inverse-0);
+    border: none;
+    color: var(--foreground-color-inverse-0);
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
