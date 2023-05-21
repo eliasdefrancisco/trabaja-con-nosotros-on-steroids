@@ -1,3 +1,4 @@
+import CompanyMockSelector from './clientComponents/CompanyMockSelector'
 import GptQuery from './clientComponents/GptQuery'
 import styles from './page.module.css'
 
@@ -14,6 +15,7 @@ export default function Home () {
       <p>
         Permite a las empresas que buscan trabajadores en Infojobs, generar el código HTML necesario para incrustar un enlace en sus webs corporativas, el cual llevará a los usuarios a un formulario con preguntas autogeneradas con una IA tipo ChatGPT
       </p>
+      <CompanyMockSelector />
       <GptQuery />
     </main>
   )
