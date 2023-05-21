@@ -18,7 +18,7 @@ Además, nuestra apuesta internacional nos ha hecho globales, actualmente desarr
 
 ¿Te gustaría inventar el futuro con nosotros?
 Si pudieras diseñar la tecnología del futuro, ¿cómo sería? Tenemos una visión y la queremos compartir contigo, porque la tecnología digital del futuro es posible hoy con nosotros.
-    `,
+    `
   },
   {
     companyName: 'Unilever',
@@ -32,7 +32,7 @@ Donde tus ideas pueden ayudar a cambiar el mundo.
 Para los próximos años, nos hemos propuesto un ambicioso reto: doblar el volumen de negocio a la vez que reducimos nuestro impacto medioambiental e incrementamos de manera positiva nuestro impacto social.
 
 Para conseguirlo, buscamos a los mejores talentos con ganas de cambiar el mundo de forma sostenible. Trabajarás en una compañía líder en I+D, rodeado/a de gente que proviene de todo el mundo, en unas oficinas diseñadas para que tu trabajo sea lo más agradable posible, con marcas de prestigio internacional y una filosofía de trabajo ágil. Te daremos las herramientas para poder trabajar donde quieras y como quieras; porque lo que valoramos son los resultados y tu desempeño, y cómo llegues a ellos sólo depende de ti. Creemos firmemente que un entorno de confianza y flexible, combinado con tu visión de negocio, te incentivarán a aportar la próxima GRAN IDEA.
-    `,
+    `
   },
   {
     companyName: 'PepsiCo',
@@ -44,6 +44,6 @@ PepsiCo Iberia es la división responsable de las operaciones en España y Portu
 
 Contamos con un equipo humano de aproximadamente 3.500 personas, 4 oficinas centrales (Barcelona, Madrid, Vitoria y Lisboa, Portugal-), 8 plantas de producción (Alimentación: en Burgos, Murcia, Lobón y Carregado, Portugal-, y de Bebidas en Vitoria, Sevilla, Tafalla y Mallorca) y rutas comerciales propias.
 Para más información puedes visitar nuestra página web: www.pepsico.es
-    `,
+    `
   }
 ]
