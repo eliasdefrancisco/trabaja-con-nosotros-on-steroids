@@ -1,4 +1,5 @@
 import CompanyMockSelector from './clientComponents/CompanyMockSelector'
+import EditGptResponse from './clientComponents/EditGptResponse'
 import GptQuery from './clientComponents/GptQuery'
 import styles from './page.module.css'
 
@@ -17,6 +18,7 @@ export default function Home () {
       </p>
       <CompanyMockSelector />
       <GptQuery />
+      <EditGptResponse />
     </main>
   )
 }

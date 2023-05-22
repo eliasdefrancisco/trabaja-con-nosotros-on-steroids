@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-curly-newline */
 'use client'
 
 import { useGlobalContext } from '@/app/context/store'
@@ -7,7 +6,7 @@ import { useState } from 'react'
 import LoaderMachine from '@/app/components/LoaderMachine'
 
 export default function GptQuery () {
-  const { companyId, gptData, setGptData } = useGlobalContext()
+  const { companyId, setGptData } = useGlobalContext()
   const [loading, setLoading] = useState(false)
 
   async function handleClick () {
@@ -32,25 +31,17 @@ export default function GptQuery () {
 
   return (
     <div className={styles.gptQuery}>
-      {loading &&
-        <LoaderMachine />
-      }
-      {!loading &&
-        <>
-          <button className={styles.button} onClick={handleClick}>
-            Obtener formulario
-          </button>
-          <div className={styles.gptData}>
-            {gptData.map((item) => {
-              return (
-                <div key={item.question}>
-                  <h3>{item.question}</h3>
-                  <p>{item.answer}</p>
-                </div>
-              )
-            })}
+      {
+        loading &&
+          <div className={styles.loading}>
+            <LoaderMachine />
           </div>
-        </>
+      }
+      {
+        !loading &&
+          <button className={styles.button} onClick={handleClick}>
+            Generar formulario en una IA
+          </button>
       }
     </div>
   )

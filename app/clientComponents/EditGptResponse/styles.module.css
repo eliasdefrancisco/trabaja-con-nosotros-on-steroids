@@ -1,0 +1,54 @@
+.content {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.content .item {
+  width: 100%;
+}
+
+.content textarea {
+  width: 100%;
+  background-color: var(--background-color-0);
+  color: var(--foreground-color-1);
+  border-radius: 5px;
+  margin: 0.2rem 0;
+  padding: 0.3rem;
+}
+
+.question {
+  height: 3rem;
+}
+
+.answer {
+  height: 8rem;
+}
+
+.saveButtonActive {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: var(--background-color-inverse-0);
+  color: var(--foreground-color-inverse-0);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.saveButtonInactive {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: var(--background-color-0);
+  color: var(--foreground-color-0);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}

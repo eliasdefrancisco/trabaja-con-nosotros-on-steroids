@@ -1,29 +1,27 @@
 .gptQuery {
     margin-top: 1rem;
+    width: 100%;
 }
 
 .gptData {
     margin-top: 1rem;
 }
 
+.loading {
+    margin: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
 .button {
+    margin-top: 1rem;
+    width: 100%;
     background-color: var(--background-color-inverse-0);
-    border: none;
     color: var(--foreground-color-inverse-0);
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 2px 2px;
-    cursor: pointer;
+    border: none;
     border-radius: 4px;
-    height: 30px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
 }
