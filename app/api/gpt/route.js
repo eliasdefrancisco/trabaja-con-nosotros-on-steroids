@@ -17,46 +17,49 @@ export async function getGptJson (companyId) {
     console.log('!! api getGptJson() companyDescription not found. companyId: ', companyId)
     return ''
   }
-  const completion = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
-    messages: [
-      {
-        role: ChatCompletionRequestMessageRoleEnum.System,
-        content: gptSystemPrompt + companyDescription
-      },
-      {
-        role: ChatCompletionRequestMessageRoleEnum.User,
-        content: gptUserPrompt
-      }
-    ]
-  })
-  const data = completion.data.choices[0].message?.content
-  console.log('!! api getGptJson()', data)
+  // const completion = await openai.createChatCompletion({
+  //   model: 'gpt-3.5-turbo',
+  //   messages: [
+  //     {
+  //       role: ChatCompletionRequestMessageRoleEnum.System,
+  //       content: gptSystemPrompt + companyDescription
+  //     },
+  //     {
+  //       role: ChatCompletionRequestMessageRoleEnum.User,
+  //       content: gptUserPrompt
+  //     }
+  //   ]
+  // })
+  // const data = completion.data.choices[0].message?.content
+  // console.log('!! api getGptJson()', data)
 
-  //   const data = `
-  // [
-  //   {
-  //     pregunta: "¿Cómo podrías describir tus habilidades para trabajar en equipo?",
-  //     respuesta: "Considero que tengo habilidades para trabajar en equipo, me gusta colaborar y compartir ideas con mis compañeros. Creo que la COLABORACIÓN es clave para alcanzar metas ambiciosas y me gusta fomentar el espíritu de equipo en mi entorno laboral".
-  //   },
-  //   {
-  //     pregunta: "¿Cómo te defines en cuanto a compromiso y confianza?",
-  //     respuesta: "Considero que el COMPROMISO y la CONFIANZA son fundamentales en mi desempeño laboral. Me gusta cumplir con mis responsabilidades y trabajar duro para lograr mis objetivos, y siempre busco establecer relaciones de confianza con mis compañeros y superiores".
-  //   },
-  //   {
-  //     pregunta: "¿Cómo describirías tu capacidad para resolver problemas complejos?",
-  //     respuesta: "Creo que tengo una capacidad destacable para resolver problemas complejos. Me gusta analizar los diferentes elementos de una situación y considerar múltiples perspectivas para encontrar la mejor solución. Además, disfruto de los retos cargados de ilusión y DIVERSIÓN y trato de mantener una actitud positiva ante situaciones difíciles".
-  //   },
-  //   {
-  //     pregunta: "¿Cómo te adaptas a la innovación y a las nuevas tecnologías?",
-  //     respuesta: "Soy una persona curiosa y abierta a nuevas ideas y tecnologías. Me gusta mantenerme actualizado en cuanto a las novedades en mi sector y estar al tanto de las tendencias. Además, considero que la innovación es clave para la transformación digital y me encanta formar parte de ella".
-  //   },
-  //   {
-  //     pregunta: "¿Cómo describirías tu capacidad para enfrentar retos de negocio?",
-  //     respuesta: "Soy una persona ambiciosa y perseverante que siempre está dispuesta a enfrentar retos de negocio. Combinando mi especialización en tecnologías de vanguardia con mi amplio conocimiento de los retos de negocio, me considero capaz de tomar decisiones sensatas y estratégicas con el objetivo de alcanzar los objetivos de mi empresa y de ofrecer soluciones innovadoras a sus clientes".
-  //   }
-  // ]
-  // `
+  const data = `[
+    {
+      "id": "1",
+      "question": "¿Cómo describirías tus habilidades de colaboración y espíritu de equipo?",
+      "answer": "Considero que tengo habilidades sólidas de colaboración y trabajo en equipo. Me gusta trabajar en conjunto con mis colegas y utilizar todas las habilidades y conocimientos que cada uno tiene para llegar a una solución óptima. Creo que el éxito de un proyecto radica en la capacidad de las personas para trabajar juntas, y esta es una habilidad que valoro y trato de fomentar en mi entorno laboral."
+    },
+    {
+      "id": "2",
+      "question": "¿Podrías explicar cómo has afrontado situaciones complejas en tu trabajo anterior?",
+      "answer": "En mi último trabajo, me enfrenté a una situación compleja cuando tuvimos que implementar una nueva tecnología para nuestro equipo. Trabajé en equipo con los demás miembros del equipo y utilicé mi conocimiento y experiencia para encontrar soluciones creativas y efectivas. Mi enfoque fue proactivo y planifiqué cuidadosamente mi trabajo para evitar errores y garantizar el éxito del proyecto. Aprendí mucho de esa situación y me di cuenta de que la planificación cuidadosa y el enfoque en equipo pueden llevar a grandes resultados."
+    },
+    {
+      "id": "3",
+      "question": "¿Cómo describirías tu compromiso y confianza en las personas?",
+      "answer": "Para mí, el compromiso y la confianza en las personas son fundamentales en cualquier entorno laboral. Soy una persona que cree y apoya a sus compañeros de trabajo. Me esfuerzo por establecer relaciones sólidas y confiables en el trabajo, lo que lleva a un mejor desempeño del equipo y del individuo. Me gusta trabajar en equipo ya que creo que todos tenemos algo valioso que aportar. Me gusta ser un apoyo para mis colegas y ayudarlos a crecer en su rol."
+    },
+    {
+      "id": "4",
+      "question": "¿Podrías describir una situación en la que aplicaste tus conocimientos y experiencia para perseguir la excelencia?",
+      "answer": "Una situación memorable en la que pude aplicar mis conocimientos y experiencia fue cuando lideré un proyecto para una campaña publicitaria. Como tenía experiencia previa en proyectos similares, pude aportar un enfoque creativo al equipo y sugirieron algunas ideas innovadoras. Por ser líder, también trabajé en colaboración con mis colegas para que pudieran aplicar sus habilidades de la manera más efectiva posible. Trabajamos incansablemente en este proyecto, y a través de nuestro esfuerzo y dedicación, logramos superar las expectativas del cliente."
+    },
+    {
+      "id": "5",
+      "question": "¿Podrías comentar brevemente cómo has llevado a cabo un proyecto de transformación digital?",
+      "answer": "Lleve a cabo un proyecto de transformación digital en mi último trabajo, que enfocado en la implementación de una nueva plataforma de software. Me aseguré de trabajar en equipo con varios departamentos de la empresa y de que todos los usuarios fueran debidamente capacitados. Como resultado, nuestros procesos se mejoraron notablemente y se aceleró el tiempo de respuesta. Tuve que estar en sintonía con el resto del equipo en todo momento para garantizar un proyecto fluido y exitoso."
+    }
+  ]`
 
   return data
 }
