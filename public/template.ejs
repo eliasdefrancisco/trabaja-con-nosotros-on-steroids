@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preguntas y respuestas</title>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body {
+        padding: 2rem 0;
+        background-color: #f5f5f5;
+        color: #323436;
+        
+      }
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      button {
+        margin-top: 1rem;
+      }
+      textarea {
+        height: 10rem !important;
+      }
+      textarea::placeholder {
+        color: #eee !important;
+      }
+      h1 {
+        font-size: 1.8rem;
+        color: #303030;
+        font-weight: 200;
+      }
+      .bold {
+        font-size: 2rem;
+        color: #323436;
+        font-weight: 400;
+      }
+      .little {
+        font-size: 0.7rem;
+        color: #303030;
+        font-weight: 300;
+      }
+      input::placeholder {
+        color: #eee !important;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <img 
+      src="https://components.infojobs.com/statics/images/infojobs-fill.svg"
+      alt="Infojobs logo"
+      height="25"
+      width="100"
+    />
+    <h1>En <span class="bold"><%= companyName %></span> queremos conocerte</h1>
+    <% description.split('\n').forEach((paragraph) => { %>
+      <p><%= paragraph %></p>
+    <% }); %>
+    <hr />
+    <h1>Ahora te toca, cuentanos sobre <span class="bold">tí</span></h1>
+    <form action="" method="post">
+      <% questionsAndAnswers.forEach((questAndAnsw, index) => { %>
+        <div class="form-group">
+          <label for="pregunta<%= index + 1 %>"><%= questAndAnsw.question %></label>
+          <textarea 
+            class="form-control"
+            id="pregunta<%= index + 1 %>"
+            name="pregunta<%= index + 1 %>"
+            placeholder="<%= questAndAnsw.answer %>"
+          ></textarea>
+        </div>
+      <% }); %>
+      <div>
+        <label for="email">Deja tu email y te contactaremos</label>
+      </div>
+      <input type="email" name="email" placeholder="tu@email.com" />
+      <p class="little">
+        * Este paso no haría falta si el formulario estuviese vinculado a una oferta de trabajo
+      </p>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
