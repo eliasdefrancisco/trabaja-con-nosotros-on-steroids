@@ -1,3 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+
 .button {
     margin-top: 1rem;
     width: 100%;
@@ -9,4 +18,13 @@
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
+}
+
+.htmlCode {
+    width: 100%;
+    height: 11rem;
+}
+
+.copyCode {
+    padding: 0.2rem;
 }
