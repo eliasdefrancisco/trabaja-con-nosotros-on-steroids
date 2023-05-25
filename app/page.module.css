@@ -9,3 +9,15 @@
   padding: 1rem;
   background-color: var(--background-color-1);
 }
+
+.description {
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 100;
+  margin-bottom: 0.4rem;
+}
+
+.barra {
+  width: 100%;
+  margin: 2rem 0 1rem;
+}
