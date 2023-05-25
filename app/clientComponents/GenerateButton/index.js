@@ -56,6 +56,7 @@ export default function GenerateButton () {
       <button className={styles.button} onClick={handleGenerate}>
         Generar botón !!
       </button>
+      {htmlFromServer && <h2 className={styles.buttonDescription}>Haz clic en este botón autogenerado para experimentar su eficacia y luego copia el código de abajo en tu sitio web para incorporar su funcionalidad</h2>}
       {htmlFromServer && <div dangerouslySetInnerHTML={{ __html: htmlFromServer }} />}
       {htmlFromServer && <textarea className={styles.htmlCode} value={htmlFromServer} readOnly />}
       {htmlFromServer && <button className={styles.copyCode} onClick={copyHtmlToClipboard}>Copiar código al portapapeles</button>}

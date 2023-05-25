@@ -22,9 +22,13 @@
 
 .htmlCode {
     width: 100%;
-    height: 11rem;
+    height: 12rem;
 }
 
 .copyCode {
     padding: 0.2rem;
+}
+
+.buttonDescription {
+    text-align: center;
 }

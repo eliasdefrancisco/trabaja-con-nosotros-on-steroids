@@ -2,6 +2,12 @@
   margin-top: 1rem;
 }
 
+.little {
+  font-size: 0.7rem;
+  color: #303030;
+  font-weight: 300;
+}
+
 .showDescription {
   cursor: pointer;
 }
