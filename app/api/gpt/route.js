@@ -73,7 +73,7 @@ export async function POST (request) {
     return new Response('No se ha especificado una descripción', { status: 400 })
   }
   const data = await getGptJson(companyId)
-  console.log('!! api gpt/route.js POST()', data)
+  // console.log('!! api gpt/route.js POST()', data)
   try {
     return NextResponse.json(data)
   } catch {
