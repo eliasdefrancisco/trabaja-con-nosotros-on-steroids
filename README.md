@@ -18,6 +18,6 @@ Ademas de las ventajas al usuario, la web de Infojobs quedaría beneficiada de p
 
 ## Decisiones técnicas
 
-- No hará falta conectarse a su api de empresas, ya que no se proporciona acceso a la misma. En su lugar se usara un json mock con informacion de varias empresas (Incluir atSistemas)
+- No hará falta conectarse a su api de empresas, ya que no se proporciona acceso a la misma. En su lugar se usara un json mock con informacion de varias empresas
 - No hará falta conectarse con su api de clientes, ya que el usuario al inscribirse en la oferta, solamente tendra de dejar su nombre de usuario en la incripción para que la empresa lo contacte
 - No se hara CSS en darkmode, ya que InfoJobs no la ofrece en su web
