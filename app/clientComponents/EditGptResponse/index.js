@@ -24,7 +24,7 @@ export default function EditGptResponse () {
         gptData.map((item, index) => {
           return (
             <div key={item.id} className={styles.item}>
-              <h3>Pregunta y posible respuesta número {index + 1}</h3>
+              <h3>Pregunta y respuesta de ejemplo número {index + 1}</h3>
               <textarea
                 value={item.question}
                 className={styles.question}

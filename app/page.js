@@ -20,7 +20,7 @@ export default function Home () {
         Al hacer clic en el botón, tus visitantes son dirigidos a un formulario inteligente, alimentado por la sofisticada inteligencia artificial de ChatGPT. Aquí, se encontrarán con preguntas personalizadas autogeneradas que capturan su potencial y se adaptan a las necesidades únicas de tu empresa
       </p>
       <p className={styles.description}>
-        Revolutiona tu proceso de reclutamiento y maximiza el rendimiento de tu tráfico web con este sistema eficiente y sin esfuerzo. Descubre, atrae y adquiere talento de una manera que nunca antes habías imaginado. Haz que tu sitio web trabaje para ti - ¡conviértelo en tu mejor aliado de reclutamiento con nuestro botón 'Trabaja con nosotros' hoy mismo y sin esfuerzo!
+        Revoluciona tu proceso de reclutamiento con este sistema eficiente y sin esfuerzo. Descubre, atrae y adquiere talento de una manera que nunca antes habías imaginado. Haz que tu sitio web trabaje para ti - ¡conviértelo en tu mejor aliado de reclutamiento con nuestro botón 'Trabaja con nosotros' hoy mismo y sin esfuerzo!
       </p>
       <hr className='barra' />
       <CompanyMockSelector />
