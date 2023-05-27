@@ -5,12 +5,13 @@ import ejs from 'ejs'
 
 export async function createButtonHtml (companyId) {
   try {
+    const domainUrl = process.env.DOMAIN_URL
     const outputFileName = `${companyId}-button.html`
     const templatePath = path.join(process.cwd(), 'public', 'button.ejs')
     const outputPath = path.join(process.cwd(), 'public', outputFileName)
     const template = await fs.readFile(templatePath, 'utf-8')
     // Render the EJS template
-    const html = ejs.render(template, { companyId })
+    const html = ejs.render(template, { companyId, domainUrl })
     // Write the rendered HTML to a file in the /public folder
     await fs.writeFile(outputPath, html)
     return outputFileName
@@ -22,12 +23,13 @@ export async function createButtonHtml (companyId) {
 
 export async function createFormHtml (companyId, questionsAndAnswers, companyName, description) {
   try {
+    const domainUrl = process.env.DOMAIN_URL
     const outputFileName = `${companyId}-form.html`
     const templatePath = path.join(process.cwd(), 'public', 'form.ejs')
     const outputPath = path.join(process.cwd(), 'public', outputFileName)
     const template = await fs.readFile(templatePath, 'utf-8')
     // Render the EJS template
-    const html = ejs.render(template, { questionsAndAnswers, companyName, description })
+    const html = ejs.render(template, { questionsAndAnswers, companyName, description, domainUrl, companyId })
     // Write the rendered HTML to a file in the /public folder
     await fs.writeFile(outputPath, html)
     return outputFileName

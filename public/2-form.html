@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preguntas y respuestas</title>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body {
+        padding: 2rem 0;
+        background-color: #f5f5f5;
+        color: #323436;
+        
+      }
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      #email {
+        width: 20rem;
+      }
+      button {
+        margin-top: 1rem;
+      }
+      textarea {
+        height: 10rem !important;
+      }
+      textarea::placeholder {
+        color: #eee !important;
+      }
+      h1 {
+        font-size: 1.8rem;
+        color: #303030;
+        font-weight: 200;
+      }
+      .bold {
+        font-size: 2rem;
+        color: #323436;
+        font-weight: 400;
+      }
+      .little {
+        font-size: 0.7rem;
+        color: #303030;
+        font-weight: 300;
+      }
+      input::placeholder {
+        color: #eee !important;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <img 
+      src="https://components.infojobs.com/statics/images/infojobs-fill.svg"
+      alt="Infojobs logo"
+      height="25"
+      width="100"
+    />
+    <h1>En <span class="bold">Unilever</span> queremos conocerte</h1>
+    
+      <p></p>
+    
+      <p>Bienvenid@ a una compañía apasionante</p>
+    
+      <p>Donde tus ideas pueden ayudar a cambiar el mundo.</p>
+    
+      <p></p>
+    
+      <p>2,000 millones de veces al día, en algún lugar del mundo, alguien utiliza productos Unilever. Desde deliciosos helados hasta la marca de desodorantes para hombres más deseada del planeta. ¡Pero aún queremos más!</p>
+    
+      <p></p>
+    
+      <p>Para los próximos años, nos hemos propuesto un ambicioso reto: doblar el volumen de negocio a la vez que reducimos nuestro impacto medioambiental e incrementamos de manera positiva nuestro impacto social.</p>
+    
+      <p></p>
+    
+      <p>Para conseguirlo, buscamos a los mejores talentos con ganas de cambiar el mundo de forma sostenible. Trabajarás en una compañía líder en I+D, rodeado/a de gente que proviene de todo el mundo, en unas oficinas diseñadas para que tu trabajo sea lo más agradable posible, con marcas de prestigio internacional y una filosofía de trabajo ágil. Te daremos las herramientas para poder trabajar donde quieras y como quieras; porque lo que valoramos son los resultados y tu desempeño, y cómo llegues a ellos sólo depende de ti. Creemos firmemente que un entorno de confianza y flexible, combinado con tu visión de negocio, te incentivarán a aportar la próxima GRAN IDEA.</p>
+    
+      <p>    </p>
+    
+    <hr />
+    <h1>Ahora te toca, cuentanos sobre <span class="bold">tí</span></h1>
+    <form action="http://localhost:3000/api/register" method="post">
+      
+        <div class="form-group">
+          <label for="pregunta1">¿Cuáles son las principales responsabilidades en este puesto?</label>
+          <textarea 
+            class="form-control"
+            id="pregunta1"
+            name="¿Cuáles son las principales responsabilidades en este puesto?"
+            placeholder="Me encargaría de gestionar un equipo y asegurarme de que se cumplan los objetivos establecidos, además de trabajar en proyectos innovadores para mejorar la sostenibilidad de la empresa"
+          ></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="pregunta2">¿Cómo describirías la cultura de la empresa?</label>
+          <textarea 
+            class="form-control"
+            id="pregunta2"
+            name="¿Cómo describirías la cultura de la empresa?"
+            placeholder="La empresa se enfoca en tener un ambiente de trabajo colaborativo, diverso e inclusivo, en el que se valora el trabajo en equipo y la creatividad para encontrar soluciones en conjunto"
+          ></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="pregunta3">¿Qué oportunidades de crecimiento ofrece la empresa?</label>
+          <textarea 
+            class="form-control"
+            id="pregunta3"
+            name="¿Qué oportunidades de crecimiento ofrece la empresa?"
+            placeholder="Unilever es una empresa que brinda muchas oportunidades de desarrollo profesional y personal a través de programas de capacitación y promoción interna, además de ofrecer experiencias internacionales y rotación de puestos"
+          ></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="pregunta4">¿Cómo se promueve el trabajo en equipo en la empresa?</label>
+          <textarea 
+            class="form-control"
+            id="pregunta4"
+            name="¿Cómo se promueve el trabajo en equipo en la empresa?"
+            placeholder="Se fomenta el intercambio de ideas y la colaboración entre los equipos a través de reuniones regulares, actividades de integración y proyectos interdepartamentales"
+          ></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="pregunta5">¿Cómo afronta la empresa los retos a nivel ambiental y social?</label>
+          <textarea 
+            class="form-control"
+            id="pregunta5"
+            name="¿Cómo afronta la empresa los retos a nivel ambiental y social?"
+            placeholder="La empresa se enfoca en implementar soluciones sostenibles, desde la fabricación hasta el packaging, con un enfoque en reducir la huella ambiental y promover la responsabilidad social. Además, trabaja en conjunto con organizaciones internacionales para impulsar cambios positivos en la sociedad"
+          ></textarea>
+        </div>
+      
+      <div>
+        <label for="email">Deja tu email y te contactaremos</label>
+      </div>
+      <input type="email" id="email" name="email" placeholder="tu@email.com" />
+      <p class="little">
+        * Este paso no haría falta si el formulario estuviese vinculado a una oferta de trabajo
+      </p>
+      <input type="hidden" name="companyId" value="2" />
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>

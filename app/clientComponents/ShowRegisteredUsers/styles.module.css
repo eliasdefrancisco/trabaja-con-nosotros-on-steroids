@@ -1,0 +1,14 @@
+.email {
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-decoration: underline;
+    text-decoration-color: var(--blue-2);
+}
+
+.userForm {
+    margin: 1rem 0 0.5rem 0
+}
+
+.userForm div {
+    padding-left: 0.3rem;
+}

@@ -4,9 +4,12 @@ import Image from 'next/image'
 import styles from './styles.module.css'
 import { useGlobalContext } from '@/app/context/store'
 import { companiesMock } from '@/app/context/companiesMock'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
-export default function CompanyMockSelector () {
+export default function CompanyMockSelector ({ domainUrl }) {
   const {
+    companyId,
     setCompanyId,
     setCompanyName,
     imageName,
@@ -14,6 +17,7 @@ export default function CompanyMockSelector () {
     setDescription
   } = useGlobalContext()
   const companyNames = companiesMock.map((company) => company.companyName)
+  const [registerDataExists, setRegisterDataExists] = useState(false)
 
   function handleSelect (e) {
     const selectedCompany = companiesMock.find(
@@ -24,6 +28,24 @@ export default function CompanyMockSelector () {
     setImageName(selectedCompany.imageName)
     setDescription(selectedCompany.description)
   }
+
+  async function checkRegiterJsonExists (companyId) {
+    const registerUrl = domainUrl + companyId + '-register.json'
+    try {
+      const response = await fetch(registerUrl, { method: 'HEAD' }).then((data) => {
+        setRegisterDataExists(data)
+      })
+      return response.ok
+    } catch (error) {
+      return false
+    }
+  }
+
+  useEffect(() => {
+    if (companyId) {
+      checkRegiterJsonExists(companyId)
+    }
+  }, [companyId, domainUrl])
 
   return (
     <div className={styles.container}>
@@ -42,6 +64,16 @@ export default function CompanyMockSelector () {
             )
           })}
         </select>
+        {
+          registerDataExists &&
+            <Link href={`/showRegisters/${companyId}`}>
+              Ver usuarios registrados →
+            </Link>
+        }
+        {
+          !registerDataExists &&
+            <p>No hay usuarios registrados</p>
+        }
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import './globals.css'
 import Header from './header/page'
 import Footer from './footer/page'
 import { GlobalContextProvider } from './context/store'
+import styles from './layout.module.css'
 
 const montserratFont = Montserrat({
   weight: ['100', '300', '500'],
@@ -23,7 +24,9 @@ export default function RootLayout ({ children }) {
       <body className={montserratFont.className}>
         <GlobalContextProvider>
           <Header />
-          {children}
+          <div className={styles.container}>
+            {children}
+          </div>
           <Footer />
         </GlobalContextProvider>
       </body>

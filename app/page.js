@@ -6,7 +6,7 @@ import styles from './page.module.css'
 
 export default function Home () {
   return (
-    <main className={styles.main}>
+    <main>
       <h2>
         Genera el botón de `Trabaja con nosotros` para tu web en un par de clicks y sin necesidad de redactar
       </h2>
@@ -22,8 +22,8 @@ export default function Home () {
       <p className={styles.description}>
         Revoluciona tu proceso de reclutamiento con este sistema eficiente y sin esfuerzo. Descubre, atrae y adquiere talento de una manera que nunca antes habías imaginado. Haz que tu sitio web trabaje para ti - ¡conviértelo en tu mejor aliado de reclutamiento con nuestro botón 'Trabaja con nosotros' hoy mismo y sin esfuerzo!
       </p>
-      <hr className='barra' />
-      <CompanyMockSelector />
+      <hr className={styles.barra} />
+      <CompanyMockSelector domainUrl={process.env.DOMAIN_URL} />
       <GptQuery />
       <EditGptResponse />
       <GenerateButton />
