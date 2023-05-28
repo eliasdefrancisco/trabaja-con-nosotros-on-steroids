@@ -16,12 +16,11 @@ export default function CompanyMockSelector ({ domainUrl }) {
     setImageName,
     setDescription
   } = useGlobalContext()
-  const companyNames = companiesMock.map((company) => company.companyName)
   const [registerDataExists, setRegisterDataExists] = useState(false)
 
   function handleSelect (e) {
     const selectedCompany = companiesMock.find(
-      (company) => company.companyName === e.target.value
+      (company) => company.companyId === e.target.value
     )
     setCompanyId(selectedCompany.companyId)
     setCompanyName(selectedCompany.companyName)
@@ -32,9 +31,7 @@ export default function CompanyMockSelector ({ domainUrl }) {
   async function checkRegiterJsonExists (companyId) {
     const registerUrl = domainUrl + companyId + '-register.json'
     try {
-      const response = await fetch(registerUrl, { method: 'HEAD' }).then((data) => {
-        setRegisterDataExists(data)
-      })
+      const response = await fetch(registerUrl, { method: 'HEAD' })
       return response.ok
     } catch (error) {
       return false
@@ -43,7 +40,9 @@ export default function CompanyMockSelector ({ domainUrl }) {
 
   useEffect(() => {
     if (companyId) {
-      checkRegiterJsonExists(companyId)
+      checkRegiterJsonExists(companyId).then((data) => {
+        setRegisterDataExists(data)
+      })
     }
   }, [companyId, domainUrl])
 
@@ -57,10 +56,15 @@ export default function CompanyMockSelector ({ domainUrl }) {
         <div>
           <Image src={`/${imageName}`} alt={`${imageName} logo`} width={50} height={50} />
         </div>
-        <select className={styles.select} onChange={handleSelect}>
-          {companyNames.map((name) => {
+        <select
+          className={styles.select}
+          onChange={handleSelect}
+          value={companyId}
+        >
+          {companiesMock.map(company => {
+            const { companyName: name, companyId: id } = company
             return (
-              <option key={name} value={name}>{name}</option>
+              <option key={id} value={id}>{name}</option>
             )
           })}
         </select>
