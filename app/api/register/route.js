@@ -1,5 +1,6 @@
 import { promises as fs } from 'fs'
 import path from 'path'
+import { emitEventServerUpdate } from '../events/route'
 
 async function readJsonFile (companyId) {
   // Ruta del archivo
@@ -59,10 +60,14 @@ async function updateJsonFile (arr, id) {
   try {
     // Escribir el objeto al archivo
     await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8')
-    return true // Devuelve true si se completa con éxito
+    // Informar al cliente de que se ha habido cambios en el servidor
+    emitEventServerUpdate()
+    // Devuelve true si se completa con éxito
+    return true
   } catch (err) {
     console.error(err)
-    return false // Devuelve false si ocurre un error
+    // Devuelve false si ocurre un error
+    return false
   }
 }
 

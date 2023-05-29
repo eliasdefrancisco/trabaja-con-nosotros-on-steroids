@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 import { companiesMock } from './companiesMock'
 
 const GlobalContext = createContext({
@@ -9,6 +9,7 @@ const GlobalContext = createContext({
   imageName: companiesMock[0].imageName,
   description: companiesMock[0].description,
   gptData: [],
+  lastServerUpdate: null,
   setCompanyName: () => null,
   setImageName: () => null,
   setDescription: () => null,
@@ -21,6 +22,19 @@ export const GlobalContextProvider = ({ children }) => {
   const [imageName, setImageName] = useState(companiesMock[0].imageName)
   const [description, setDescription] = useState(companiesMock[0].description)
   const [gptData, setGptData] = useState([])
+  const [lastServerUpdate, setLastServerUpdate] = useState([])
+
+  useEffect(() => {
+    // Escucha cuando ha habido un cambio en el servidor y actualiza el estado en el cliente
+    const eventSource = new window.EventSource('/api/events')
+    eventSource.onmessage = (event) => {
+      setLastServerUpdate(event.data)
+    }
+    // Limpiar el EventSource cuando el componente se desmonte
+    return () => {
+      eventSource.close()
+    }
+  }, [])
 
   return (
     <GlobalContext.Provider value={{
@@ -33,7 +47,8 @@ export const GlobalContextProvider = ({ children }) => {
       imageName,
       setImageName,
       description,
-      setDescription
+      setDescription,
+      lastServerUpdate
     }}
     >
       {children}

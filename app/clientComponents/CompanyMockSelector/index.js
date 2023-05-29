@@ -14,7 +14,8 @@ export default function CompanyMockSelector ({ domainUrl }) {
     setCompanyName,
     imageName,
     setImageName,
-    setDescription
+    setDescription,
+    lastServerUpdate
   } = useGlobalContext()
   const [registerDataExists, setRegisterDataExists] = useState(false)
 
@@ -44,7 +45,7 @@ export default function CompanyMockSelector ({ domainUrl }) {
         setRegisterDataExists(data)
       })
     }
-  }, [companyId, domainUrl])
+  }, [companyId, domainUrl, lastServerUpdate])
 
   return (
     <div className={styles.container}>

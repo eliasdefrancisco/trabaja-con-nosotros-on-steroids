@@ -31,7 +31,6 @@ export async function getGptJson (companyId) {
     ]
   })
   const data = completion.data.choices[0].message?.content
-  console.log('!! api getGptJson()', data)
 
   // const data = `[
   //   {
