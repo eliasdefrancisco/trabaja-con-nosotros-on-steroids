@@ -6,10 +6,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
       body {
-        padding: 2rem 0;
+        padding: 2rem 0 !important;
         background-color: #f5f5f5;
         color: #323436;
-        
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .container {
+        width: 100% !important;
+        margin: 1rem !important;
       }
       .form-group {
         margin-bottom: 1.5rem;
@@ -22,9 +30,10 @@
       }
       textarea {
         height: 10rem !important;
+        background-color: #f0f8ff !important;
       }
       textarea::placeholder {
-        color: #eee !important;
+        color: #bcd !important;
       }
       h1 {
         font-size: 1.8rem;
@@ -36,13 +45,31 @@
         color: #323436;
         font-weight: 400;
       }
+      .email {
+        background-color: #f0f6fa !important;
+      }
       .little {
         font-size: 0.7rem;
         color: #303030;
         font-weight: 300;
       }
       input::placeholder {
-        color: #eee !important;
+        color: #eee;
+      }
+      @media (min-width: 576px) {
+        .container {
+            max-width: 576px !important;
+        }
+      } 
+      @media (min-width: 768px) {
+        .container {
+            max-width: 768px !important;
+        }
+      }
+      @media (min-width: 850px) {
+        .container {
+            max-width: 850px !important;
+        }
       }
     </style>
 </head>
@@ -75,7 +102,7 @@
       <div>
         <label for="email">Deja tu email y te contactaremos</label>
       </div>
-      <input type="email" id="email" name="email" placeholder="tu@email.com" />
+      <input type="email" id="email" name="email" placeholder="tu@email.com" class="email" />
       <p class="little">
         * Este paso no haría falta si el formulario estuviese vinculado a una oferta de trabajo
       </p>

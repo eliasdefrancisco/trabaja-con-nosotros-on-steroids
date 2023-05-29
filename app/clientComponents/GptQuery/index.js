@@ -3,7 +3,7 @@
 import { useGlobalContext } from '@/app/context/store'
 import styles from './styles.module.css'
 import { useState } from 'react'
-import LoaderMachine from '@/app/components/LoaderMachine'
+import LoaderMachine from '@/app/clientComponents/LoaderMachine'
 
 export default function GptQuery () {
   const { companyId, setGptData } = useGlobalContext()

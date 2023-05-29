@@ -23,8 +23,8 @@
   }
 }
 
-/* Para pantallas mayores a 750px se muestran las demas imagenes */
-@media screen and (min-width: 750px) {
+/* Para pantallas mayores a 768px se muestran las demas imagenes */
+@media screen and (min-width: 768px) {
   .header img {
     display: block;
   }

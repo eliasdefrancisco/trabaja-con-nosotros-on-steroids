@@ -34,12 +34,14 @@ a {
 }
 
 h1 {
+  font-size: 1.8rem;
   font-weight: 500;
   margin: 0.6rem 0;
 }
 
 h2 {
-  font-weight: 100;
+  font-size: 1.4rem;
+  font-weight: 200;
   margin: 0.3rem 0;
 }
 
@@ -52,4 +54,11 @@ h3 {
 p {
   font-weight: 300;
   margin: 0.1rem 0;
+}
+
+/* Para pantallas mayores a 768px se muestran las demas imagenes */
+@media screen and (min-width: 768px) {
+  .h1 {
+    font-size: 2rem;
+  }
 }

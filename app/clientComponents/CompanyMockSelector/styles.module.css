@@ -1,5 +1,5 @@
 .container {
-  margin-top: 1rem;
+  margin: 3rem 0 2rem 0;
 }
 
 .little {
@@ -77,4 +77,15 @@
 .select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
+}
+.registerUsersText {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+/* Para pantallas mayores a 768px se muestran las demas imagenes */
+@media screen and (min-width: 768px) {
+  .registerUsersText {
+    font-size: 1rem;
+    font-weight: 300;
+  }
 }

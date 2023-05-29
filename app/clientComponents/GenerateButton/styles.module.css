@@ -6,9 +6,8 @@
     width: 100%;
     gap: 1rem;
 }
-
 .button {
-    margin-top: 1rem;
+    margin-top: 3rem;
     width: 100%;
     background-color: var(--background-color-inverse-0);
     color: var(--foreground-color-inverse-0);
@@ -19,16 +18,14 @@
     font-weight: 500;
     cursor: pointer;
 }
-
 .htmlCode {
     width: 100%;
     height: 12rem;
+    margin-top: 2rem;
 }
-
-.copyCode {
-    padding: 0.2rem;
+.generatedButton {
+    margin-top: 2rem;
 }
-
 .buttonDescription {
     text-align: center;
 }

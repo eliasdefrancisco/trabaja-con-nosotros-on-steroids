@@ -41,9 +41,9 @@
   position: absolute;
   color: transparent;
   text-align: center;
-  top: 1rem;
-  font-size: 2rem;
-  text-shadow: 0 0 10px #fffaaa; 
+  top: 0.2rem;
+  font-size: 1.8rem;
+  text-shadow: 0 0 3px rgba(128, 182, 255, 0.3); 
   background-clip: text;
   -webkit-background-clip: text;
 }

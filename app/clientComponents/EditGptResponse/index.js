@@ -19,12 +19,13 @@ export default function EditGptResponse () {
 
   return (
     <div className={styles.content}>
-      <h2>Puedes editar el formulario autogenerado</h2>
+      <h2>Personaliza a tu gusto</h2>
+      <p className={styles.description}>Este es el formulario autogenerado el cual tendrán que rellenar tus usuarios al pulsar el botón de 'Trabaja con nosotros' en tu web.Consta de preguntas y ejemplos de respuestas autogeneradas por chatGPT</p>
       {
         gptData.map((item, index) => {
           return (
             <div key={item.id} className={styles.item}>
-              <h3>Pregunta y respuesta de ejemplo número {index + 1}</h3>
+              <h3 className={styles.title}>Pregunta y respuesta de ejemplo número {index + 1}</h3>
               <textarea
                 value={item.question}
                 className={styles.question}

@@ -8,13 +8,13 @@
 }
 
 .loading {
-    margin: 1rem;
+    margin: 1rem -60px 1rem 0;
     width: 100%;
     text-align: center;
 }
 
 .button {
-    margin-top: 1rem;
+    margin: 3rem 0 1rem 0;
     width: 100%;
     background-color: var(--background-color-inverse-0);
     color: var(--foreground-color-inverse-0);

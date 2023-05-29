@@ -6,7 +6,7 @@ import { GlobalContextProvider } from './context/store'
 import styles from './layout.module.css'
 
 const montserratFont = Montserrat({
-  weight: ['100', '300', '500'],
+  weight: ['200', '300', '500'],
   subsets: ['latin'],
   style: ['normal'],
   variable: '--font-monsterrat',

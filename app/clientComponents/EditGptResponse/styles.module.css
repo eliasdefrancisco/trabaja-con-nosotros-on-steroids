@@ -8,6 +8,7 @@
 
 .content .item {
   width: 100%;
+  margin: 0.5rem 0;
 }
 
 .content textarea {
@@ -19,10 +20,21 @@
   padding: 0.3rem;
 }
 
+.title {
+  font-size: 1rem;
+}
+
 .question {
   height: 3rem;
 }
 
 .answer {
   height: 8rem;
+}
+
+.description {
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 200;
+  padding-bottom: 1.5rem;
 }

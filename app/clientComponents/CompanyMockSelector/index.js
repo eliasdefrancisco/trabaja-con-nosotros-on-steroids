@@ -71,13 +71,18 @@ export default function CompanyMockSelector ({ domainUrl }) {
         </select>
         {
           registerDataExists &&
-            <Link href={`/showRegisters/${companyId}`}>
+            <Link
+              href={`/showRegisters/${companyId}`}
+              className={styles.registerUsersText}
+            >
               Ver usuarios registrados →
             </Link>
         }
         {
           !registerDataExists &&
-            <p>No hay usuarios registrados</p>
+            <p className={styles.registerUsersText}>
+              No hay usuarios registrados
+            </p>
         }
       </div>
     </div>

@@ -7,10 +7,10 @@ import styles from './page.module.css'
 export default function Home () {
   return (
     <main>
-      <h2>
+      <h2 className={styles.subTitle}>
         Genera el botón de `Trabaja con nosotros` para tu web en un par de clicks y sin necesidad de redactar
       </h2>
-      <h1>
+      <h1 className={styles.title}>
         Trabaja con nosotros ¡On steroids!
       </h1>
       <p className={styles.description}>

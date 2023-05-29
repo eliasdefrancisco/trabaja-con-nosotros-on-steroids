@@ -6,10 +6,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
       body {
-        padding: 2rem 0;
+        padding: 2rem 0 !important;
         background-color: #f5f5f5;
         color: #323436;
-        
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .container {
+        width: 100% !important;
+        margin: 1rem !important;
       }
       .form-group {
         margin-bottom: 1.5rem;
@@ -22,9 +30,10 @@
       }
       textarea {
         height: 10rem !important;
+        background-color: #f0f8ff !important;
       }
       textarea::placeholder {
-        color: #eee !important;
+        color: #bcd !important;
       }
       h1 {
         font-size: 1.8rem;
@@ -36,13 +45,31 @@
         color: #323436;
         font-weight: 400;
       }
+      .email {
+        background-color: #f0f6fa !important;
+      }
       .little {
         font-size: 0.7rem;
         color: #303030;
         font-weight: 300;
       }
       input::placeholder {
-        color: #eee !important;
+        color: #eee;
+      }
+      @media (min-width: 576px) {
+        .container {
+            max-width: 576px !important;
+        }
+      } 
+      @media (min-width: 768px) {
+        .container {
+            max-width: 768px !important;
+        }
+      }
+      @media (min-width: 850px) {
+        .container {
+            max-width: 850px !important;
+        }
       }
     </style>
 </head>
@@ -95,59 +122,59 @@
     <form action="http://localhost:3000/api/register" method="post">
       
         <div class="form-group">
-          <label for="pregunta1">¿Cómo describirías tu estilo de trabajo en equipo?</label>
+          <label for="pregunta1">¿Cuál cree que ha sido su mayor logro profesional hasta el momento?</label>
           <textarea 
             class="form-control"
             id="pregunta1"
-            name="¿Cómo describirías tu estilo de trabajo en equipo?"
-            placeholder="Me considero una persona colaboradora y comprometida con los objetivos del equipo. Me gusta aportar ideas y participar en la toma de decisiones, siempre respetando las opiniones de los demás."
+            name="¿Cuál cree que ha sido su mayor logro profesional hasta el momento?"
+            placeholder="Mi mayor logro profesional ha sido liderar un equipo y lograr aumentar la productividad en un 20% en el plazo de seis meses."
           ></textarea>
         </div>
       
         <div class="form-group">
-          <label for="pregunta2">¿Cómo sueles enfrentarte a los retos profesionales?</label>
+          <label for="pregunta2">¿Cómo se mantiene al día en cuanto a las últimas tendencias y avances en tecnología?</label>
           <textarea 
             class="form-control"
             id="pregunta2"
-            name="¿Cómo sueles enfrentarte a los retos profesionales?"
-            placeholder="Ante un reto profesional me gusta buscar alternativas creativas y analizar todas las posibles soluciones. A su vez, me gusta trabajar en equipo para que podamos obtener diferentes perspectivas y entre todos conseguir el éxito del proyecto."
+            name="¿Cómo se mantiene al día en cuanto a las últimas tendencias y avances en tecnología?"
+            placeholder="Asisto a conferencias y eventos tecnológicos, escucho podcasts y leo blog de expertos en la industria. También me gusta experimentar con nuevas tecnologías en mi tiempo libre."
           ></textarea>
         </div>
       
         <div class="form-group">
-          <label for="pregunta3">¿Por qué te interesa trabajar en atSistemas?</label>
+          <label for="pregunta3">¿Cómo describiría su estilo de trabajo?</label>
           <textarea 
             class="form-control"
             id="pregunta3"
-            name="¿Por qué te interesa trabajar en atSistemas?"
-            placeholder="Me interesa atSistemas porque debido a su trayectoria, experiencia y especialización en diferentes áreas, sé que formaré parte de un equipo altamente profesional y con un gran compromiso en desarrollar soluciones innovadoras."
+            name="¿Cómo describiría su estilo de trabajo?"
+            placeholder="Soy muy organizado y me gusta planificar meticulosamente cada proyecto antes de empezar. También me gusta colaborar en equipo y compartir conocimientos con mis compañeros."
           ></textarea>
         </div>
       
         <div class="form-group">
-          <label for="pregunta4">¿Cómo te mantienes actualizado sobre las tendencias tecnológicas?</label>
+          <label for="pregunta4">¿Cómo reaccionaría si no dispone de toda la información necesaria para completar un proyecto?</label>
           <textarea 
             class="form-control"
             id="pregunta4"
-            name="¿Cómo te mantienes actualizado sobre las tendencias tecnológicas?"
-            placeholder="Me gusta investigar y gracias a una formación constante, me mantengo actualizado en las nuevas tendencias y tecnologías emergentes. A su vez, formar parte de comunidades de profesionales también me ha permitido estar al tanto de lo último en el sector."
+            name="¿Cómo reaccionaría si no dispone de toda la información necesaria para completar un proyecto?"
+            placeholder="Haría todo lo posible para  reunir la información faltante, comunicaría con mi equipo y preguntaría a mis superiores para asegurarme de tener todo lo necesario para completar el proyecto de manera adecuada y satisfactoria."
           ></textarea>
         </div>
       
         <div class="form-group">
-          <label for="pregunta5">¿Cómo describirías tu capacidad para adaptarte a los cambios?</label>
+          <label for="pregunta5">¿Cómo ha manejado situaciones difíciles en el pasado?</label>
           <textarea 
             class="form-control"
             id="pregunta5"
-            name="¿Cómo describirías tu capacidad para adaptarte a los cambios?"
-            placeholder="Considero que soy una persona con una gran capacidad de adaptación al cambio, siempre dispuesto a afrontar nuevos desafíos. Me gusta estar en constante aprendizaje y reto, y considero que eso me ha permitido tener la destreza de adaptarme a los nuevos escenarios."
+            name="¿Cómo ha manejado situaciones difíciles en el pasado?"
+            placeholder="Me he mantenido enfocado en los resultados finales y he trabajado con mi equipo para buscar soluciones creativas. Siempre pido retroalimentación de mis superiores para mejorar mi desempeño en situaciones difíciles en el futuro."
           ></textarea>
         </div>
       
       <div>
         <label for="email">Deja tu email y te contactaremos</label>
       </div>
-      <input type="email" id="email" name="email" placeholder="tu@email.com" />
+      <input type="email" id="email" name="email" placeholder="tu@email.com" class="email" />
       <p class="little">
         * Este paso no haría falta si el formulario estuviese vinculado a una oferta de trabajo
       </p>
