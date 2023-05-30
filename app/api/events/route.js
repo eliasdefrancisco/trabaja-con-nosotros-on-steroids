@@ -1,5 +1,8 @@
-// Version con EventEmmiter, se implementa este fix con eventos a nivel del objeto process !!!
 import { TransformStream } from 'stream/web'
+
+// Muy importante para que funcione el build
+export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
 
 // Permite informar a los clientes que se ha actualizado el servidor
 export function emitEventServerUpdate () {
