@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preguntas y respuestas</title>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body {
+        padding: 2rem 0 !important;
+        background-color: #f5f5f5;
+        color: #323436;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .container {
+        width: 100% !important;
+        margin: 1rem !important;
+      }
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      #email {
+        width: 20rem;
+      }
+      button {
+        margin-top: 1rem;
+      }
+      textarea {
+        height: 10rem !important;
+        background-color: #f0f8ff !important;
+      }
+      textarea::placeholder {
+        color: #bcd !important;
+      }
+      h1 {
+        font-size: 1.8rem;
+        color: #303030;
+        font-weight: 200;
+      }
+      .bold {
+        font-size: 2rem;
+        color: #323436;
+        font-weight: 400;
+      }
+      .email {
+        background-color: #f0f6fa !important;
+      }
+      .little {
+        font-size: 0.7rem;
+        color: #303030;
+        font-weight: 300;
+      }
+      input::placeholder {
+        color: #eee;
+      }
+      @media (min-width: 576px) {
+        .container {
+            max-width: 576px !important;
+        }
+      } 
+      @media (min-width: 768px) {
+        .container {
+            max-width: 768px !important;
+        }
+      }
+      @media (min-width: 850px) {
+        .container {
+            max-width: 850px !important;
+        }
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <img 
+      src="https://components.infojobs.com/statics/images/infojobs-fill.svg"
+      alt="Infojobs logo"
+      height="25"
+      width="100"
+    />
+    <h1>En <span class="bold">Unilever</span> queremos conocerte</h1>
+    
+      <p></p>
+    
+      <p>Bienvenid@ a una compañía apasionante</p>
+    
+      <p>Donde tus ideas pueden ayudar a cambiar el mundo.</p>
+    
+      <p></p>
+    
+      <p>2,000 millones de veces al día, en algún lugar del mundo, alguien utiliza productos Unilever. Desde deliciosos helados hasta la marca de desodorantes para hombres más deseada del planeta. ¡Pero aún queremos más!</p>
+    
+      <p></p>
+    
+      <p>Para los próximos años, nos hemos propuesto un ambicioso reto: doblar el volumen de negocio a la vez que reducimos nuestro impacto medioambiental e incrementamos de manera positiva nuestro impacto social.</p>
+    
+      <p></p>
+    
+      <p>Para conseguirlo, buscamos a los mejores talentos con ganas de cambiar el mundo de forma sostenible. Trabajarás en una compañía líder en I+D, rodeado/a de gente que proviene de todo el mundo, en unas oficinas diseñadas para que tu trabajo sea lo más agradable posible, con marcas de prestigio internacional y una filosofía de trabajo ágil. Te daremos las herramientas para poder trabajar donde quieras y como quieras; porque lo que valoramos son los resultados y tu desempeño, y cómo llegues a ellos sólo depende de ti. Creemos firmemente que un entorno de confianza y flexible, combinado con tu visión de negocio, te incentivarán a aportar la próxima GRAN IDEA.</p>
+    
+      <p>    </p>
+    
+    <hr />
+    <h1>Ahora te toca, cuentanos sobre <span class="bold">tí</span></h1>
+    <form action="https://trabaja-con-nosotros-on-steroids-production.up.railway.app/api/register" method="post">
+      
+        <div class="form-group">
+          <label for="pregunta1">¿Cuál es tu motivación para trabajar en una empresa comprometida con la sostenibilidad y el impacto social?</label>
+          <textarea 
+            class="form-control"
+            id="pregunta1"
+            name="¿Cuál es tu motivación para trabajar en una empresa comprometida con la sostenibilidad y el impacto social?"
+            placeholder="Me siento motivado/a por la posibilidad de trabajar en una empresa que hace una diferencia positiva en el mundo. Siempre he querido trabajar en una empresa con valores y ética similares a los míos y Unilever parece ser la compañía ideal para mí."
+          ></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="pregunta2">¿Cómo te adaptas a trabajar en un entorno global y multicultural?</label>
+          <textarea 
+            class="form-control"
+            id="pregunta2"
+            name="¿Cómo te adaptas a trabajar en un entorno global y multicultural?"
+            placeholder="Tengo experiencia trabajando en equipos globales y me considero una persona adaptable y con una mente abierta. Disfruto trabajando con personas de diferentes culturas y creo que trabajar en Unilever sería una gran oportunidad para seguir mejorando mis habilidades de trabajo en equipo multicultural."
+          ></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="pregunta3">¿Cómo te mantienes actualizado/a en las tendencias del mercado y los avances tecnológicos?</label>
+          <textarea 
+            class="form-control"
+            id="pregunta3"
+            name="¿Cómo te mantienes actualizado/a en las tendencias del mercado y los avances tecnológicos?"
+            placeholder="Me gusta leer publicaciones relevantes y estar al tanto de los avances tecnológicos en mi tiempo libre. También asisto a conferencias y eventos relacionados con mi área de trabajo para mantenerme actualizado/a sobre las tendencias del mercado y nuevas tecnologías relevantes."
+          ></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="pregunta4">¿Qué habilidades crees que serían esenciales para tener éxito en esta posición?</label>
+          <textarea 
+            class="form-control"
+            id="pregunta4"
+            name="¿Qué habilidades crees que serían esenciales para tener éxito en esta posición?"
+            placeholder="Creo que sería esencial tener fuertes habilidades de comunicación, trabajar bien en equipo y saber cómo tomar iniciativas. Además, tener habilidades de liderazgo es importante para poder tomar decisiones y motivar a los demás."
+          ></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="pregunta5">¿Cómo describirías tu resolución de problemas y habilidades analíticas?</label>
+          <textarea 
+            class="form-control"
+            id="pregunta5"
+            name="¿Cómo describirías tu resolución de problemas y habilidades analíticas?"
+            placeholder="Creo que soy una persona analítica con habilidades fuertes de resolución de problemas. Busco soluciones creativas y racionales para los problemas y me gusta trabajar con datos y estadísticas para tomar decisiones informadas. Siempre estoy buscando maneras de mejorar mis habilidades analíticas y metodología de trabajo para mejor contribuir con mi equipo de trabajo."
+          ></textarea>
+        </div>
+      
+      <div>
+        <label for="email">Deja tu email y te contactaremos</label>
+      </div>
+      <input type="email" id="email" name="email" placeholder="tu@email.com" class="email" />
+      <p class="little">
+        * Este paso no haría falta si el formulario estuviese vinculado a una oferta de trabajo
+      </p>
+      <input type="hidden" name="companyId" value="2" />
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
